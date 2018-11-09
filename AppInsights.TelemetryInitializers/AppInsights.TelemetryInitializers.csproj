@@ -5,8 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.1.0</Version>
     <Authors>Vincent-Philippe Lauzon</Authors>
-    <RepositoryUrl>https://github.com/vplauzon/AppInsightTelemetryInitializer</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/vplauzon/AppInsightTelemetryInitializer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vplauzon/AppInsights.TelemetryInitializers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/vplauzon/AppInsights.TelemetryInitializers</PackageProjectUrl>
     <AssemblyName>AppInsights.TelemetryInitializers</AssemblyName>
     <RootNamespace>AppInsights.TelemetryInitializers</RootNamespace>
   </PropertyGroup>
