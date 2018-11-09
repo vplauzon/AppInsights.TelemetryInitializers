@@ -7,11 +7,6 @@ variables:
   dummy: '42'
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Restore
-  inputs:
-    command: restore
-    projects: '**/*.csproj'
-- task: DotNetCoreCLI@2
   displayName: Build
   inputs:
     projects: '**/*.csproj'
