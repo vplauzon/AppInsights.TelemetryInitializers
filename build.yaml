@@ -16,14 +16,12 @@ steps:
   inputs:
     command: test
     projects: '**/*Test*.csproj'
-- task: DotNetCoreCLI@2
-  displayName: Publish
+- task: CopyFiles@2
+  displayName: 'Copy Nuget packages to staging'
   inputs:
-    command: publish
-    publishWebProjects: false
-    projects: '**/*.csproj'
-    arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
-    zipAfterPublish: True
+    SourceFolder: .
+    Contents: '**/*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
