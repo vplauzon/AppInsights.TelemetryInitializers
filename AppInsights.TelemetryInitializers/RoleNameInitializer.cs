@@ -27,7 +27,7 @@ namespace AppInsights.TelemetryInitializers
 
         void ITelemetryInitializer.Initialize(ITelemetry telemetry)
         {
-            telemetry.Context.Cloud.RoleName = "PasWebApi";
+            telemetry.Context.Cloud.RoleName = _roleName;
         }
     }
 }
