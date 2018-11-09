@@ -1,16 +1,15 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+resources:
+- repo: self
+queue:
+  name: Hosted Ubuntu 1604
 
-pool:
-  vmImage: 'Ubuntu 16.04'
-
+variables:
+  dummy: '42'
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet test'
+  inputs:
+    command: test
+    projects: '**/*Test*.csproj'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
