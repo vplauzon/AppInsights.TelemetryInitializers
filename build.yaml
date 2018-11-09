@@ -6,6 +6,11 @@ queue:
 variables:
   dummy: '42'
 steps:
+- task: PythonScript@0
+  displayName: 'Inject build number'
+  inputs:
+    scriptPath: deployment/build/patch-version.py
+    arguments: 'AppInsights.TelemetryInitializers/AppInsights.TelemetryInitializers.csproj $(Build.BuildId)'
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
