@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>C:\Users\vilauzon\Documents\git\AppInsights.TelemetryInitializers\AppInsights.TelemetryInitializers\AppInsights.TelemetryInitializers.xml</DocumentationFile>
+    <DocumentationFile>AppInsights.TelemetryInitializers.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

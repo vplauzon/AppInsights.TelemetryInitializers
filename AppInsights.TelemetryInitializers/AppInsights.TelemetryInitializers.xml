@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AppInsights.TelemetryInitializers</name>
+    </assembly>
+    <members>
+        <member name="T:AppInsights.TelemetryInitializers.RequestBodyInitializer">
+            <summary>Add the request body to a telemetry.  Applies to requests telemetries only.</summary>
+            <remarks>
+            Warning:  can substantially increase the volume of telemetry.
+            Based on https://stackoverflow.com/questions/42686363/view-post-request-body-in-application-insights.
+            </remarks>
+        </member>
+        <member name="M:AppInsights.TelemetryInitializers.RequestBodyInitializer.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Construct an initializer.  This is typically done via dependency injection in ASP.NET Core, i.e.
+            <code>services.AddSingleton&lt;RequestBodyInitializer, RequestBodyInitializer&gt;()</code>
+            </summary>
+            <param name="httpContextAccessor">HTTP Context accessor ; passed by depency injection (ASP.NET Core).</param>
+        </member>
+        <member name="T:AppInsights.TelemetryInitializers.RoleNameInitializer">
+            <summary>Add a cloud role name to the context of every telemetries.</summary>
+            <remarks>
+            This allows to monitor multiple components and discriminate betweeen components.
+            See https://docs.microsoft.com/en-us/azure/application-insights/app-insights-monitor-multi-role-apps.
+            </remarks>
+        </member>
+        <member name="M:AppInsights.TelemetryInitializers.RoleNameInitializer.#ctor(System.String)">
+            <summary>Construct an initializer with a role name.</summary>
+            <param name="roleName">Cloud role name to assign to telemetry's context.</param>
+        </member>
+    </members>
+</doc>
