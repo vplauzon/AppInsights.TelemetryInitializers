@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.1.1</Version>
+    <Version>0.1.0</Version>
     <Authors>Vincent-Philippe Lauzon</Authors>
     <RepositoryUrl>https://github.com/vplauzon/AppInsights.TelemetryInitializers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/vplauzon/AppInsights.TelemetryInitializers</PackageProjectUrl>
