@@ -12,15 +12,15 @@ steps:
     scriptPath: deployment/build/patch-version.py
     arguments: 'AppInsights.TelemetryInitializers/AppInsights.TelemetryInitializers.csproj $(Build.BuildId)'
 - task: DotNetCoreCLI@2
-  displayName: Build
-  inputs:
-    projects: '**/*.csproj'
-    arguments: '--configuration $(BuildConfiguration)'
-- task: DotNetCoreCLI@2
   displayName: 'dotnet test'
   inputs:
     command: test
     projects: '**/*Test*.csproj'
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    projects: '**/*.csproj'
+    arguments: '--configuration release'
 - task: CopyFiles@2
   displayName: 'Copy Nuget packages to staging'
   inputs:

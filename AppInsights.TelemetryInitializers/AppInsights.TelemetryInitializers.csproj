@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+    <Version>1.0</Version>
     <Authors>Vincent-Philippe Lauzon</Authors>
     <RepositoryUrl>https://github.com/vplauzon/AppInsights.TelemetryInitializers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/vplauzon/AppInsights.TelemetryInitializers</PackageProjectUrl>
