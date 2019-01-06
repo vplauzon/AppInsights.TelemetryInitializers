@@ -4,6 +4,13 @@
         <name>AppInsights.TelemetryInitializers</name>
     </assembly>
     <members>
+        <member name="T:AppInsights.TelemetryInitializers.ActionInitializer">
+            <summary>Generic initializer invoking an action at initialization.</summary>
+        </member>
+        <member name="M:AppInsights.TelemetryInitializers.ActionInitializer.#ctor(System.Action{Microsoft.ApplicationInsights.DataContracts.TelemetryContext})">
+            <summary>Construct an initializer with an action.</summary>
+            <param name="action">Action to invoke when initilizing a telemetry's context.</param>
+        </member>
         <member name="T:AppInsights.TelemetryInitializers.RequestBodyInitializer">
             <summary>Add the request body to a telemetry.  Applies to requests telemetries only.</summary>
             <remarks>
@@ -28,6 +35,20 @@
         <member name="M:AppInsights.TelemetryInitializers.RoleNameInitializer.#ctor(System.String)">
             <summary>Construct an initializer with a role name.</summary>
             <param name="roleName">Cloud role name to assign to telemetry's context.</param>
+        </member>
+        <member name="T:AppInsights.TelemetryInitializers.SessionInitializer">
+            <summary>Add a session to the context of every telemetry.</summary>
+            <remarks>
+            This is useful in non-web application (i.e. where no session is added by ASP.NET).
+            It allows to segregate different run of an executable for instance.
+            </remarks>
+        </member>
+        <member name="M:AppInsights.TelemetryInitializers.SessionInitializer.#ctor">
+            <summary>Construct an initializer with a random (GUID) session ID.</summary>
+        </member>
+        <member name="M:AppInsights.TelemetryInitializers.SessionInitializer.#ctor(System.String)">
+            <summary>Construct an initializer with a session ID.</summary>
+            <param name="id">Session ID to attach to telemetry's context.</param>
         </member>
     </members>
 </doc>
